@@ -8,11 +8,25 @@
 
 body {
     font-family: 'Roboto Slab', serif;
-    text-align: center;
 }
 
 fieldset {
     border: none;
+}
+
+.contact-info input,
+textarea,
+.contact-info select {
+    background: rgba(124, 121, 121, 0.116);
+    border: none;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 2px 2px;
+}
+
+label,
+select {
+    color: rgb(124, 121, 121);
 }
 
   /* ================================= 
@@ -34,19 +48,20 @@ fieldset {
 /*Main*/
 .main_heading-container {
     padding: 0 1rem 1rem 1rem;
-    border-bottom: solid 3px black
+    border-bottom: solid 3px black;
+    text-align: center;
 }
 
 .main_heading {
     font-size: 1.2rem;
-    padding-top: 1rem;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    margin: 0.75rem 0 0 0;
 }
 
 .main_paragraph {
     color: rgb(124, 121, 121);
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    width: 100%;
 }
 
 /*Form*/
@@ -60,7 +75,94 @@ fieldset {
     font-weight: bold;
     text-align: left;
     font-size: 1rem;
-    padding-bottom: 1rem;
+}
+
+.contact_grouping label {
+    text-align: left;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.form,
+.contact_grouping,
+.newsletter_grouping
+{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.contact_grouping {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+#zip {
+    width: 50%;
+}
+
+.contact-info {
+    border-bottom: solid 2px black; 
+    padding-bottom: 1.5rem; 
+    margin-bottom: 1rem;
+}
+
+/*Newsletter*/
+.newsletter_selection_label {
+    text-align: left;
+}
+
+.checkbox-container,
+.radio-container {
+    display: flex;
+    align-content: flex-start;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+    padding-top: 0.25rem;
+    padding: 0.25rem 0.25rem 0.25rem 0;
+}
+
+.checkbox-label,
+.radio-label {
+    padding-left: 1rem;
+}
+
+.newsletter_grouping {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.newsletter_selection_label {
+    padding-top: 0.25rem;
+}
+
+.newsletter_selection_label,
+.newsletter_format_label,
+.interests_label {
+    padding-bottom: 0.5rem;
+}
+
+textarea {
+    height: 100px;
+}
+
+.btn {
+    width: 90%;
+    padding: 1rem;
+    color: white;
+    align-self: center;
+    border: none;
+    background: rgb(58, 172, 158);
+}
+
+/*Footer*/
+.footer {
+    padding-top: 1rem;
+    text-align: center;
+    color: rgb(124, 121, 121);
+}
+.footer_paragraph {
+    font-size: 0.75rem;
 }
   /* ================================= 
     Media Queries
