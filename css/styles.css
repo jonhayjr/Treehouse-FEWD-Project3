@@ -97,10 +97,6 @@ select {
     padding-bottom: 0.25rem;
 }
 
-#zip {
-    width: 50%;
-}
-
 .contact-info {
     border-bottom: solid 2px black; 
     padding-bottom: 1.5rem; 
@@ -167,3 +163,35 @@ textarea {
   /* ================================= 
     Media Queries
   ==================================== */
+@media (min-width: 768px) {
+    /*Heading*/
+    .header {
+        padding: 0.5rem;
+        font-size: 0.65rem;
+    }
+    /*Main*/
+    .main { 
+        width: 65%;
+        margin: 0 auto;
+        padding-top: 2rem;
+    }
+
+    .form {
+        padding-top: 2rem;
+    }
+
+    .form_section_heading {
+        padding-bottom: 1rem;
+    }
+
+    .contact_grouping {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact_grouping > label {
+        width: 40%;
+    }
+
+}
