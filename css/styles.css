@@ -29,6 +29,19 @@ select {
     color: rgb(124, 121, 121);
 }
 
+input::placeholder,
+select {                                                                                                      
+    font-size: 0.75rem;
+}
+
+input::placeholder {
+    text-align: right;
+}
+
+li {
+    list-style: none;
+}
+
   /* ================================= 
     Base Layout Styles
   ==================================== */
@@ -36,7 +49,7 @@ select {
 .header {
     background: black;
     color: white;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
     font-size: 0.75rem;
 }
@@ -47,7 +60,7 @@ select {
 
 /*Main*/
 .main_heading-container {
-    padding: 0 1rem 1rem 1rem;
+    padding: 0.65rem 1rem 1.5rem 1rem;
     border-bottom: solid 3px black;
     text-align: center;
 }
@@ -104,39 +117,39 @@ select {
 }
 
 /*Newsletter*/
-.newsletter_selection_label {
-    text-align: left;
-}
-
 .checkbox-container,
-.radio-container {
+.radio-container,
+.interests {
     display: flex;
-    align-content: flex-start;
-    padding-right: 0.25rem;
-    padding-left: 0.25rem;
-    padding-top: 0.25rem;
-    padding: 0.25rem 0.25rem 0.25rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0.5rem 0 1rem;
 }
 
-.checkbox-label,
-.radio-label {
-    padding-left: 1rem;
-}
+.checkbox-container li,
+.radio-container li {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 
-.newsletter_grouping {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
+#plain-text + label {
+      margin: 0;
+  }
 
-.newsletter_selection_label {
-    padding-top: 0.25rem;
+.checkbox-container input,
+.radio-container input {
+    margin-right: 1rem;
 }
 
 .newsletter_selection_label,
 .newsletter_format_label,
 .interests_label {
-    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
+
 
 #zip {
     width: 50%;
@@ -146,11 +159,15 @@ textarea {
     height: 100px;
 }
 
+.btn-div {
+    padding-top: 1.5rem;
+}
+
 .btn {
     width: 100%;
-    padding: 1rem;
-    margin: 0 auto;
+    padding: 1.2rem;
     color: white;
+    border-radius: 5px 5px;
     align-self: center;
     border: none;
     background: rgb(58, 172, 158);

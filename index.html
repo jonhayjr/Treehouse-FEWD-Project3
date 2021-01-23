@@ -18,7 +18,7 @@
             <h2 class="main_heading">Signup for our newsletter</h2>
             <p class="main_paragraph">Get the latest news on how your code is doing right in your inbox</p>
         </div>
-        <form action="" method="post" class="form">
+        <form action="index.html" method="post" class="form">
             <fieldset class="form_section contact-info">
                 <legend class="form_section_heading">Contact Information</legend>
                 <div class="name contact_grouping long">
@@ -44,7 +44,7 @@
                 <div class="state contact_grouping long">
                     <label for="state">State</label>
                     <select name="user_state" id="state">
-                        <option value="" disabled selected>Choose State</option>
+                        <option class="placeholder_state" value="" disabled selected>Choose State</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
                         <option value="AZ">Arizona</option>
@@ -100,50 +100,54 @@
                 </div>
                 <div class="zip contact_grouping">
                     <label for="zip">Zip Code</label>
-                    <input type="text" id="zip" name="user_zip">
+                    <input type="text" id="zip" name="user_zip" placeholder="ex. 92563">
                 </div>
             
             </fieldset>
             <fieldset class="form_section newsletter">
                 <legend class="form_section_heading">Newsletter</legend>
-                <div class="newsletter_selection newsletter_grouping">
-                    
-                    <label class="newsletter_selection_label">Select the newsletters you would like to receive</label>
-                    
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="newsletter_selection" value="html_news" id="html_news" class="checkbox" checked>
-                        <label for="html_news" class="checkbox-label">HTML News</label>
-                    </div>
-
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="newsletter_selection" value="css_news" id="css_news" class="checkbox"> 
-                        <label for="css_news" class="checkbox-label">CSS News</label>
-                    </div>
-                    
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="newsletter_selection" value="javascript_news" id="javascript_news" class="checkbox">
-                        <label for="javascript_news" class="checkbox-label">Javascript News</label>
-                    </div>
-                   
+                <div class="newsletter_selection newsletter_grouping">  
+                    <ul class="checkbox-container">
+                        <li>
+                            <label class="newsletter_selection_label">Select the newsletters you would like to receive</label> 
+                        </li>
+                        <li>
+                            <input type="checkbox" name="newsletter_selection" value="html_news" id="html_news" class="checkbox" checked>
+                            <label for="html_news" class="checkbox-label">HTML News</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="newsletter_selection" value="css_news" id="css_news" class="checkbox"> 
+                            <label for="css_news" class="checkbox-label">CSS News</label>
+                        </li>
+                        <li>         
+                            <input type="checkbox" name="newsletter_selection" value="javascript_news" id="javascript_news" class="checkbox">
+                            <label for="javascript_news" class="checkbox-label">Javascript News</label>   
+                        </li>
                 </div>
                 <div class="newsletter_format newsletter_grouping">
-                    <label class="newsletter_format_label">Newsletter format</label>
-
-                    <div class="radio-container">
-                        <input type="radio" id="html" name="user_newsletter-format" value="html" checked>
-                        <label for="html" class="radio-label">HTML</label> 
-                    </div>
-                    <div class="radio-container">
-                        <input type="radio" id="plain-text" name="user_newsletter-format" value="plain-text">
-                        <label for="plain-text" class="radio-container radio-label">Plain text</label>
-                    </div>
+                    <ul class="radio-container">
+                        <li>
+                            <label class="newsletter_format_label">Newsletter format
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" id="html" name="user_newsletter-format" value="html" checked>
+                            <label for="html" class="radio-label">HTML</label> 
+                        </li>
+                        <li>
+                            <input type="radio" id="plain-text" name="user_newsletter-format" value="plain-text">
+                            <label for="plain-text" class="radio-container radio-label">Plain text</label>
+                        </li>
+                    </ul>
                 </div>
                 <div class="interests newsletter_grouping">
                     <label for="topics-of-interest" class="interests_label">Other topics you'd like to hear about</label>
                     <textarea name="user_topics-of-interest" id="topics-of-interest"></textarea>
                 </div>
+                <div class="btn-div newsletter_grouping">
+                    <button type="submit" class="btn">Sign Up</button>
+                </div>
             </fieldset>
-            <button type="submit" class="btn">Sign Up</button>
         </form>
     </main>
     <footer class="footer">
