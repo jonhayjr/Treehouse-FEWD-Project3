@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Code Review</title>
-    <link rel="stylesheet" href="css\normalize.css">
-    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -18,96 +18,98 @@
             <h2 class="main_heading">Signup for our newsletter</h2>
             <p class="main_paragraph">Get the latest news on how your code is doing right in your inbox</p>
         </div>
-        <form action="index.html" method="post" class="form">
+        <form action="index.html" method="post" class="form flex">
             <fieldset class="form_section contact-info">
                 <legend class="form_section_heading">Contact Information</legend>
-                <div class="name contact_grouping long">
+                <div class="name contact_grouping flex">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="user_name" placeholder="Required" required> 
                 </div>
-               <div class="email contact_grouping long">
+               <div class="email contact_grouping flex">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="user_email" placeholder="Required" required>
                </div>
-               <div class="phone contact_grouping long">
+               <div class="phone contact_grouping flex">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="user_phone">
+                    <input type="tel" id="phone" name="user_phone" 
+                    placeholder="123-456-7890">
                </div>
-                <div class="address contact_grouping long">
+                <div class="address contact_grouping flex">
                     <label for="address">Street Address</label>
-                    <input type="text" id="address" name="user_address">
+                    <input type="text" id="address" name="user_address" placeholder="12345 Easy Street">
                 </div>
-                <div class="city contact_grouping long">
+                <div class="city contact_grouping flex">
                     <label for="city">City</label>
-                    <input type="text" id="city" name="user_city">
+                    <input type="text" id="city" name="user_city" 
+                    placeholder="Pleasantville">
                 </div>
-                <div class="state contact_grouping long">
+                <div class="state contact_grouping flex">
                     <label for="state">State</label>
                     <select name="user_state" id="state">
-                        <option class="placeholder_state" value="" disabled selected>Choose State</option>
-                        <option value="AL">Alabama</option>
-                        <option value="AK">Alaska</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="AR">Arkansas</option>
-                        <option value="CA">California</option>
-                        <option value="CO">Colorado</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="DE">Delaware</option>
-                        <option value="DC">District Of Columbia</option>
-                        <option value="FL">Florida</option>
-                        <option value="GA">Georgia</option>
-                        <option value="HI">Hawaii</option>
-                        <option value="ID">Idaho</option>
-                        <option value="IL">Illinois</option>
-                        <option value="IN">Indiana</option>
-                        <option value="IA">Iowa</option>
-                        <option value="KS">Kansas</option>
-                        <option value="KY">Kentucky</option>
-                        <option value="LA">Louisiana</option>
-                        <option value="ME">Maine</option>
-                        <option value="MD">Maryland</option>
-                        <option value="MA">Massachusetts</option>
-                        <option value="MI">Michigan</option>
-                        <option value="MN">Minnesota</option>
-                        <option value="MS">Mississippi</option>
-                        <option value="MO">Missouri</option>
-                        <option value="MT">Montana</option>
-                        <option value="NE">Nebraska</option>
-                        <option value="NV">Nevada</option>
-                        <option value="NH">New Hampshire</option>
-                        <option value="NJ">New Jersey</option>
-                        <option value="NM">New Mexico</option>
-                        <option value="NY">New York</option>
-                        <option value="NC">North Carolina</option>
-                        <option value="ND">North Dakota</option>
-                        <option value="OH">Ohio</option>
-                        <option value="OK">Oklahoma</option>
-                        <option value="OR">Oregon</option>
-                        <option value="PA">Pennsylvania</option>
-                        <option value="RI">Rhode Island</option>
-                        <option value="SC">South Carolina</option>
-                        <option value="SD">South Dakota</option>
-                        <option value="TN">Tennessee</option>
-                        <option value="TX">Texas</option>
-                        <option value="UT">Utah</option>
-                        <option value="VT">Vermont</option>
-                        <option value="VA">Virginia</option>
-                        <option value="WA">Washington</option>
-                        <option value="WV">West Virginia</option>
-                        <option value="WI">Wisconsin</option>
-                        <option value="WY">Wyoming</option>
+                        <option class="option-text" value="" disabled selected>Choose State</option>
+                        <option value="AL" class="option-text">Alabama</option>
+                        <option value="AK" class="option-text">Alaska</option>
+                        <option value="AZ" class="option-text">Arizona</option>
+                        <option value="AR" class="option-text">Arkansas</option>
+                        <option value="CA" class="option-text">California</option>
+                        <option value="CO" class="option-text">Colorado</option>
+                        <option value="CT" class="option-text">Connecticut</option>
+                        <option value="DE" class="option-text">Delaware</option>
+                        <option value="DC" class="option-text">District Of Columbia</option>
+                        <option value="FL" class="option-text">Florida</option>
+                        <option value="GA" class="option-text">Georgia</option>
+                        <option value="HI" class="option-text">Hawaii</option>
+                        <option value="ID" class="option-text">Idaho</option>
+                        <option value="IL" class="option-text">Illinois</option>
+                        <option value="IN" class="option-text">Indiana</option>
+                        <option value="IA" class="option-text">Iowa</option>
+                        <option value="KS" class="option-text">Kansas</option>
+                        <option value="KY" class="option-text">Kentucky</option>
+                        <option value="LA" class="option-text">Louisiana</option>
+                        <option value="ME" class="option-text">Maine</option>
+                        <option value="MD" class="option-text">Maryland</option>
+                        <option value="MA" class="option-text">Massachusetts</option>
+                        <option value="MI" class="option-text">Michigan</option>
+                        <option value="MN" class="option-text">Minnesota</option>
+                        <option value="MS" class="option-text">Mississippi</option>
+                        <option value="MO" class="option-text">Missouri</option>
+                        <option value="MT" class="option-text">Montana</option>
+                        <option value="NE" class="option-text">Nebraska</option>
+                        <option value="NV" class="option-text">Nevada</option>
+                        <option value="NH" class="option-text">New Hampshire</option>
+                        <option value="NJ" class="option-text">New Jersey</option>
+                        <option value="NM" class="option-text">New Mexico</option>
+                        <option value="NY" class="option-text">New York</option>
+                        <option value="NC" class="option-text">North Carolina</option>
+                        <option value="ND" class="option-text">North Dakota</option>
+                        <option value="OH" class="option-text">Ohio</option>
+                        <option value="OK" class="option-text">Oklahoma</option>
+                        <option value="OR" class="option-text">Oregon</option>
+                        <option value="PA" class="option-text">Pennsylvania</option>
+                        <option value="RI" class="option-text">Rhode Island</option>
+                        <option value="SC" class="option-text">South Carolina</option>
+                        <option value="SD" class="option-text">South Dakota</option>
+                        <option value="TN" class="option-text">Tennessee</option>
+                        <option value="TX" class="option-text">Texas</option>
+                        <option value="UT" class="option-text">Utah</option>
+                        <option value="VT" class="option-text">Vermont</option>
+                        <option value="VA" class="option-text">Virginia</option>
+                        <option value="WA" class="option-text">Washington</option>
+                        <option value="WV" class="option-text">West Virginia</option>
+                        <option value="WI" class="option-text">Wisconsin</option>
+                        <option value="WY" class="option-text">Wyoming</option>
                     </select>
                 </div>
-                <div class="zip contact_grouping">
+                <div class="zip contact_grouping flex">
                     <label for="zip">Zip Code</label>
-                    <input type="text" id="zip" name="user_zip" placeholder="ex. 92563">
+                    <input type="text" id="zip" name="user_zip" placeholder="92563">
                 </div>
             
             </fieldset>
             <fieldset class="form_section newsletter">
                 <legend class="form_section_heading">Newsletter</legend>
-                <div class="newsletter_selection newsletter_grouping">  
-                    <ul class="checkbox-container">
+                <div class="newsletter_selection newsletter_grouping flex">  
+                    <ul class="checkbox-container flex">
                         <li>
                             <label class="newsletter_selection_label">Select the newsletters you would like to receive</label> 
                         </li>
@@ -123,9 +125,10 @@
                             <input type="checkbox" name="newsletter_selection" value="javascript_news" id="javascript_news" class="checkbox">
                             <label for="javascript_news" class="checkbox-label">Javascript News</label>   
                         </li>
+                    </ul>
                 </div>
-                <div class="newsletter_format newsletter_grouping">
-                    <ul class="radio-container">
+                <div class="newsletter_format newsletter_grouping flex">
+                    <ul class="radio-container flex">
                         <li>
                             <label class="newsletter_format_label">Newsletter format
                             </label>
@@ -140,11 +143,11 @@
                         </li>
                     </ul>
                 </div>
-                <div class="interests newsletter_grouping">
+                <div class="interests newsletter_grouping flex">
                     <label for="topics-of-interest" class="interests_label">Other topics you'd like to hear about</label>
-                    <textarea name="user_topics-of-interest" id="topics-of-interest"></textarea>
+                    <textarea name="user_topics-of-interest" id="topics-of-interest" placeholder="What is the best programming language to learn for beginners?  How do I get my first job as a developer?"></textarea>
                 </div>
-                <div class="btn-div newsletter_grouping">
+                <div class="btn-div newsletter_grouping flex">
                     <button type="submit" class="btn">Sign Up</button>
                 </div>
             </fieldset>

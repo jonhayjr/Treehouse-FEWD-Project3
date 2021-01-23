@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+*:focus {
+    outline: none;
+}
+
 body {
     font-family: 'Roboto Slab', serif;
 }
@@ -14,14 +18,18 @@ fieldset {
     border: none;
 }
 
-.contact-info input,
-textarea,
-.contact-info select {
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
     background: rgba(124, 121, 121, 0.116);
     border: none;
     width: 100%;
     padding: 0.5rem;
     border-radius: 2px 2px;
+    outline: solid 2px transparent;
+    transition: 0.15s ease-in;
 }
 
 label,
@@ -30,11 +38,21 @@ select {
 }
 
 input::placeholder,
-select {                                                                                                      
+select,
+textarea::placeholder {                                                                                                      
     font-size: 0.75rem;
 }
 
-input::placeholder {
+input:focus,
+select:focus,
+textarea:focus {
+    outline: solid 2px slategray;  
+    background: rgba(124, 121, 121, 0.479); 
+}
+
+
+input[id="name"]::placeholder,
+input[id="email"]::placeholder{
     text-align: right;
 }
 
@@ -47,7 +65,7 @@ li {
   ==================================== */
 /*Heading*/
 .header {
-    background: black;
+    background: rgb(58, 172, 158);
     color: white;
     padding: 0.5rem;
     text-align: center;
@@ -56,6 +74,7 @@ li {
 
 .header_title {
     text-transform: uppercase;
+    text-shadow: 1px 1px black;
 }
 
 /*Main*/
@@ -90,16 +109,13 @@ li {
     font-size: 1rem;
 }
 
-.contact_grouping label {
+.contact_grouping > label {
     text-align: left;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
-.form,
-.contact_grouping,
-.newsletter_grouping
-{
+.flex {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
@@ -116,11 +132,14 @@ li {
     margin-bottom: 1rem;
 }
 
+#zip {
+    width: 50%;
+}
+
 /*Newsletter*/
 .checkbox-container,
 .radio-container,
 .interests {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0;
@@ -141,18 +160,13 @@ li {
 
 .checkbox-container input,
 .radio-container input {
-    margin-right: 1rem;
-}
+      margin-right: 1rem;
+  }
 
 .newsletter_selection_label,
 .newsletter_format_label,
 .interests_label {
     margin-bottom: 1rem;
-}
-
-
-#zip {
-    width: 50%;
 }
 
 textarea {
@@ -171,6 +185,15 @@ textarea {
     align-self: center;
     border: none;
     background: rgb(58, 172, 158);
+    transition: 0.25s ease-in;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    background: white;
+    color: rgb(58, 172, 158);
+    border: solid 1px rgb(58, 172, 158);
 }
 
 /*Footer*/
@@ -186,14 +209,14 @@ textarea {
     Media Queries
   ==================================== */
 @media (min-width: 768px) {
-    /*Heading*/
+/*Heading*/
     .header {
         padding: 0.5rem;
         font-size: 0.65rem;
     }
-    /*Main*/
+/*Main*/
     .main { 
-        max-width: 1200px;
+        max-width: 1000px;
         width: 65%;
         margin: 0 auto;
         padding-top: 2rem;
