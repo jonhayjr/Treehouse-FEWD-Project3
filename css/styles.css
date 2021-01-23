@@ -27,9 +27,9 @@ textarea {
     border: none;
     width: 100%;
     padding: 0.5rem;
-    border-radius: 2px 2px;
+    border-radius: 2px 2px; 
     outline: solid 2px transparent;
-    transition: 0.15s ease-in;
+    transition:all 0.25s ease-out;
 }
 
 label,
@@ -75,11 +75,12 @@ li {
 .header_title {
     text-transform: uppercase;
     text-shadow: 1px 1px black;
+    transition:all 0.25s ease-out;
 }
 
 /*Main*/
 .main_heading-container {
-    padding: 0.65rem 1rem 1.5rem 1rem;
+    padding: 1.5rem 1rem 2rem 1rem;
     border-bottom: solid 3px black;
     text-align: center;
 }
@@ -107,6 +108,7 @@ li {
     font-weight: bold;
     text-align: left;
     font-size: 1rem;
+    padding: 0.5rem 0 0.5rem 0;
 }
 
 .contact_grouping > label {
@@ -152,6 +154,7 @@ li {
     width: 100%;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    padding-bottom: 1rem;
   }
 
 #plain-text + label {
@@ -183,9 +186,9 @@ textarea {
     color: white;
     border-radius: 5px 5px;
     align-self: center;
-    border: none;
+    border: solid 1px transparent;
     background: rgb(58, 172, 158);
-    transition: 0.25s ease-in;
+    transition:all 0.25s ease-out;
 }
 
 .btn:hover,
@@ -214,12 +217,20 @@ textarea {
         padding: 0.5rem;
         font-size: 0.65rem;
     }
+
+    .header_title:hover {
+        transform: scale(1.5);
+    }
 /*Main*/
     .main { 
-        max-width: 1000px;
+        max-width:1000px;
         width: 65%;
         margin: 0 auto;
-        padding-top: 2rem;
+        padding-top: 0.5rem;
+    }
+
+    .main_paragraph {
+        font-size: 0.75rem;
     }
 
     .form {
@@ -228,6 +239,11 @@ textarea {
 
     .form_section_heading {
         padding-bottom: 1rem;
+    }
+
+    .contact-info {
+        padding-bottom: 2.5rem;
+        margin-bottom: 2.5rem;
     }
 
     .contact_grouping {
